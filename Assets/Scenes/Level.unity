@@ -1,0 +1,2375 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &49866393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 49866397}
+  - component: {fileID: 49866396}
+  - component: {fileID: 49866395}
+  - component: {fileID: 49866398}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &49866395
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49866393}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &49866396
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49866393}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &49866397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49866393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.11951482, y: 0.023506641, z: 0.027505726}
+  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &49866398
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49866393}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &75577030
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1229439534}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_Name
+      value: Base mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+--- !u!1 &429010755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429010756}
+  m_Layer: 0
+  m_Name: Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &429010756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429010755}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.7399998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1484542438}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &868729083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 868729089}
+  - component: {fileID: 868729088}
+  - component: {fileID: 868729087}
+  - component: {fileID: 868729086}
+  - component: {fileID: 868729085}
+  - component: {fileID: 868729084}
+  m_Layer: 0
+  m_Name: EazyCamera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &868729084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868729083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b0b8184d49919458a463162bd17ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controlledCamera: {fileID: 868729085}
+  _toggleLockOn:
+    m_Name: ToggleLock
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 98475868-194c-490d-9f26-3e79ede95a91
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 13cdd05d-8cb9-4f6f-ab2f-eaafbaca304b
+      m_Path: /Keyboard/t
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: ToggleLock
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 22bcbb43-dc6e-404c-98fc-8e1e622b9011
+      m_Path: /XInputControllerWindows/leftTrigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: ToggleLock
+      m_Flags: 0
+    m_Flags: 0
+  _cycleTargets:
+    m_Name: Cycle
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9b7c387d-f879-4ad4-8c58-c810a5e9f072
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 6391d8cf-aea5-419f-9fa7-d5429883e08b
+      m_Path: /Keyboard/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Cycle
+      m_Flags: 0
+    m_Flags: 0
+  _cycleRight:
+    m_Name: CycleRight
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 24931721-84c6-436c-acd9-af2b4581262b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 0620636c-0050-4450-a18b-86507062feec
+      m_Path: /Keyboard/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: CycleRight
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 79bd1ff8-cf99-44a7-b18d-c52be0f9ca58
+      m_Path: /XInputControllerWindows/rightShoulder
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: CycleRight
+      m_Flags: 0
+    m_Flags: 0
+  _cycleLeft:
+    m_Name: CycleLeft
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9b6c1009-cf2b-4854-9daf-bfec5e18e865
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 1bf04dc7-b0e1-42df-8032-b1a48dca4e26
+      m_Path: /Keyboard/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: CycleLeft
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 482defc7-e82a-4cf1-99e9-747cd10e7d68
+      m_Path: /XInputControllerWindows/leftShoulder
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: CycleLeft
+      m_Flags: 0
+    m_Flags: 0
+  _zoom:
+    m_Name: Zoom
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8039d5bd-fee3-4d76-9d6e-bc49746baea2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 4b6858f4-8a02-4e99-bda5-49b44ae58b74
+      m_Path: /Mouse/scroll
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Zoom
+      m_Flags: 0
+    m_Flags: 0
+  _orbit:
+    m_Name: Orbit
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: cfe71c40-f5b7-4eed-814b-d86c5511e38f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 9603e1f9-1a16-4f63-9fc2-1848cd48f86d
+      m_Path: /Mouse/delta
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Orbit
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 725c9240-729f-4e6e-b424-8d357f64f15c
+      m_Path: /XInputControllerWindows/rightStick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Orbit
+      m_Flags: 0
+    m_Flags: 0
+  _toggleUi:
+    m_Name: ToggleUi
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 39f08742-6989-4634-b87c-d401b78d28fe
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 89143be5-1c86-4cbd-92b3-ae1e899bef0a
+      m_Path: /Keyboard/u
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: ToggleUi
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 59e011ee-bcf2-48be-a8f2-90c6332c9324
+      m_Path: /XInputControllerWindows/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: ToggleUi
+      m_Flags: 0
+    m_Flags: 0
+  _reset:
+    m_Name: ResetCamera
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1c2d5335-b167-4474-bdd8-9cb7b24406ee
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: fcb72bee-674f-43ec-bdb5-108728647477
+      m_Path: /Keyboard/r
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: ResetCamera
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 1f0a05e4-f922-4d26-9c5b-026d421fb10c
+      m_Path: /XInputControllerWindows/rightStickPress
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: ResetCamera
+      m_Flags: 0
+    m_Flags: 0
+--- !u!114 &868729085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868729083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4b60398aa15df459f3e6809e9286d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _followTarget: {fileID: 429010756}
+  _settings:
+    Distance: -3.87
+    DefaultRotation: {x: 0, y: 0}
+    MinPitch: 0
+    MaxPitch: 0
+    YawRange: 0
+    OrbitEnabled: 1
+    MoveSpeed: 15
+    SnapFactor: 0.75
+    MaxLagDistance: 1
+    RotationSpeed: 200
+    VerticalRotation:
+      Min: -89
+      Max: 89
+    EaseCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -2.6403704
+        outSlope: -2.6403704
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.037516177
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    InvertY: 1
+    EnableCollision: 1
+    CollisionLayer:
+      serializedVersion: 2
+      m_Bits: 0
+    EnableZoom: 1
+    ZoomRange:
+      Min: -10
+      Max: -1
+    EnableTargetLock: 0
+    TargetLockIcon: {fileID: 0}
+--- !u!81 &868729086
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868729083}
+  m_Enabled: 1
+--- !u!124 &868729087
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868729083}
+  m_Enabled: 1
+--- !u!20 &868729088
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868729083}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 33047
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &868729089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868729083}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.17, y: 8.75, z: -0.03999996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1392170451}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 44.815, y: 0, z: 0}
+--- !u!1 &1229439530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1229439534}
+  - component: {fileID: 1229439535}
+  - component: {fileID: 1229439537}
+  - component: {fileID: 1229439538}
+  m_Layer: 0
+  m_Name: Player (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1229439534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229439530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.17, y: 7.01, z: 3.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1484542438}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1229439535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229439530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9176bce889097aa4aac9ebe02c99e4d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: InputActions
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[UnityEngine.InputSystem.InputAction,
+        Unity.InputSystem],[Wcng.InputKey, Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.ObjectEqualityComparer`1[[UnityEngine.InputSystem.InputAction,
+        Unity.InputSystem]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 8
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 2|UnityEngine.InputSystem.InputAction, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: Key
+    - Name: m_Type
+      Entry: 3
+      Data: 0
+    - Name: m_ExpectedControlType
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: e5f59e56-d8d7-4409-b41a-a466e3f05c59
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_SingletonActionBindings
+      Entry: 7
+      Data: 3|UnityEngine.InputSystem.InputBinding[], Unity.InputSystem
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.InputSystem.InputBinding, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: Move
+    - Name: m_Id
+      Entry: 1
+      Data: bb6344dd-4ceb-404c-88ea-bf10bc140197
+    - Name: m_Path
+      Entry: 1
+      Data: 2DVector
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Groups
+      Entry: 1
+      Data: 
+    - Name: m_Action
+      Entry: 1
+      Data: Key
+    - Name: m_Flags
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.InputSystem.InputBinding, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: up
+    - Name: m_Id
+      Entry: 1
+      Data: 1ab560ba-b0e9-4334-873d-ffd132d533b8
+    - Name: m_Path
+      Entry: 1
+      Data: <Keyboard>/w
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Groups
+      Entry: 1
+      Data: 
+    - Name: m_Action
+      Entry: 1
+      Data: Key
+    - Name: m_Flags
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.InputSystem.InputBinding, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: down
+    - Name: m_Id
+      Entry: 1
+      Data: 84309c85-cc7d-4d36-9bce-64651ea149f1
+    - Name: m_Path
+      Entry: 1
+      Data: <Keyboard>/s
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Groups
+      Entry: 1
+      Data: 
+    - Name: m_Action
+      Entry: 1
+      Data: Key
+    - Name: m_Flags
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.InputSystem.InputBinding, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: left
+    - Name: m_Id
+      Entry: 1
+      Data: 6f3d5f9d-afc5-43c2-b08d-84b817abce94
+    - Name: m_Path
+      Entry: 1
+      Data: <Keyboard>/a
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Groups
+      Entry: 1
+      Data: 
+    - Name: m_Action
+      Entry: 1
+      Data: Key
+    - Name: m_Flags
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.InputSystem.InputBinding, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: right
+    - Name: m_Id
+      Entry: 1
+      Data: c0a876d7-131b-4c59-a6f6-2556a251229e
+    - Name: m_Path
+      Entry: 1
+      Data: <Keyboard>/d
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Groups
+      Entry: 1
+      Data: 
+    - Name: m_Action
+      Entry: 1
+      Data: Key
+    - Name: m_Flags
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 4|UnityEngine.InputSystem.InputAction, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: Key
+    - Name: m_Type
+      Entry: 3
+      Data: 0
+    - Name: m_ExpectedControlType
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: 1667df1a-11bb-46af-8c22-2a375118212e
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_SingletonActionBindings
+      Entry: 7
+      Data: 5|UnityEngine.InputSystem.InputBinding[], Unity.InputSystem
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.InputSystem.InputBinding, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: 164ea847-73e7-47f5-acae-f78d40a136da
+    - Name: m_Path
+      Entry: 1
+      Data: <Mouse>/leftButton
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Groups
+      Entry: 1
+      Data: 
+    - Name: m_Action
+      Entry: 1
+      Data: Key
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 6|UnityEngine.InputSystem.InputAction, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: Key
+    - Name: m_Type
+      Entry: 3
+      Data: 0
+    - Name: m_ExpectedControlType
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: 1667df1a-11bb-46af-8c22-2a375118212e
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_SingletonActionBindings
+      Entry: 7
+      Data: 7|UnityEngine.InputSystem.InputBinding[], Unity.InputSystem
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.InputSystem.InputBinding, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: 164ea847-73e7-47f5-acae-f78d40a136da
+    - Name: m_Path
+      Entry: 1
+      Data: <Mouse>/rightButton
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Groups
+      Entry: 1
+      Data: 
+    - Name: m_Action
+      Entry: 1
+      Data: Key
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 8|UnityEngine.InputSystem.InputAction, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: Key
+    - Name: m_Type
+      Entry: 3
+      Data: 0
+    - Name: m_ExpectedControlType
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: f489d209-d520-4236-9823-1f083e2b83ec
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_SingletonActionBindings
+      Entry: 7
+      Data: 9|UnityEngine.InputSystem.InputBinding[], Unity.InputSystem
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.InputSystem.InputBinding, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: 48498923-7deb-49c7-885f-aa1cc5b56084
+    - Name: m_Path
+      Entry: 1
+      Data: <Keyboard>/w
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Groups
+      Entry: 1
+      Data: 
+    - Name: m_Action
+      Entry: 1
+      Data: Key
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 10|UnityEngine.InputSystem.InputAction, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: Key
+    - Name: m_Type
+      Entry: 3
+      Data: 0
+    - Name: m_ExpectedControlType
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: f489d209-d520-4236-9823-1f083e2b83ec
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_SingletonActionBindings
+      Entry: 7
+      Data: 11|UnityEngine.InputSystem.InputBinding[], Unity.InputSystem
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.InputSystem.InputBinding, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: 48498923-7deb-49c7-885f-aa1cc5b56084
+    - Name: m_Path
+      Entry: 1
+      Data: <Keyboard>/s
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Groups
+      Entry: 1
+      Data: 
+    - Name: m_Action
+      Entry: 1
+      Data: Key
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 12|UnityEngine.InputSystem.InputAction, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: Key
+    - Name: m_Type
+      Entry: 3
+      Data: 0
+    - Name: m_ExpectedControlType
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: f489d209-d520-4236-9823-1f083e2b83ec
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_SingletonActionBindings
+      Entry: 7
+      Data: 13|UnityEngine.InputSystem.InputBinding[], Unity.InputSystem
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.InputSystem.InputBinding, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: 48498923-7deb-49c7-885f-aa1cc5b56084
+    - Name: m_Path
+      Entry: 1
+      Data: <Keyboard>/d
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Groups
+      Entry: 1
+      Data: 
+    - Name: m_Action
+      Entry: 1
+      Data: Key
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 14|UnityEngine.InputSystem.InputAction, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: Key
+    - Name: m_Type
+      Entry: 3
+      Data: 0
+    - Name: m_ExpectedControlType
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: f489d209-d520-4236-9823-1f083e2b83ec
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_SingletonActionBindings
+      Entry: 7
+      Data: 15|UnityEngine.InputSystem.InputBinding[], Unity.InputSystem
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.InputSystem.InputBinding, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: 48498923-7deb-49c7-885f-aa1cc5b56084
+    - Name: m_Path
+      Entry: 1
+      Data: <Keyboard>/a
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Groups
+      Entry: 1
+      Data: 
+    - Name: m_Action
+      Entry: 1
+      Data: Key
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 16|UnityEngine.InputSystem.InputAction, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: Key
+    - Name: m_Type
+      Entry: 3
+      Data: 0
+    - Name: m_ExpectedControlType
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: cea50342-3f2b-4544-a00f-784feeafee80
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_SingletonActionBindings
+      Entry: 7
+      Data: 17|UnityEngine.InputSystem.InputBinding[], Unity.InputSystem
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.InputSystem.InputBinding, Unity.InputSystem
+    - Name: m_Name
+      Entry: 1
+      Data: 
+    - Name: m_Id
+      Entry: 1
+      Data: 9ece75d5-7ce3-4f85-9ba2-4243320da4b2
+    - Name: m_Path
+      Entry: 1
+      Data: <Keyboard>/shift
+    - Name: m_Interactions
+      Entry: 1
+      Data: 
+    - Name: m_Processors
+      Entry: 1
+      Data: 
+    - Name: m_Groups
+      Entry: 1
+      Data: 
+    - Name: m_Action
+      Entry: 1
+      Data: Key
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_Flags
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 3
+      Data: 11
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  moveVec2: {x: 0, y: 0}
+--- !u!114 &1229439537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229439530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42fc51b286e8e35429a1b5d534a8a9e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  acceleration: 1
+  rotateSpeed: 20
+  inputComponent: {fileID: 1229439535}
+  stateComponent: {fileID: 1229439538}
+  controller: {fileID: 1484542441}
+--- !u!114 &1229439538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229439530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9cdf2cb54a216c4792483d0b268b326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 2646724620217826704, guid: a94f1d55385393b4fa6ef68762cd83af, type: 3}
+    - {fileID: -6986167927975510084, guid: 955df72e0ce888e4b957744247697e51, type: 3}
+    - {fileID: -7333129875705441126, guid: 2b33f40cf4014b2488275c0026eb9bbe, type: 3}
+    - {fileID: -7029741437066087888, guid: 5e24292beeadcf04bbb7ead0bf781ad9, type: 3}
+    - {fileID: 4960409498807354063, guid: ee0ead42411e33f41a6d8779695e2690, type: 3}
+    - {fileID: -4325241662296732894, guid: 772dc9737d0d0e942bf8eb1f7d8defcb, type: 3}
+    - {fileID: -2437306798047886399, guid: d6e61dbe6e75cf946862a63f1a54f987, type: 3}
+    - {fileID: -6416793981150643841, guid: a539a721628c5804597045e2ef7ef663, type: 3}
+    - {fileID: -2401352121403056983, guid: 717bca9aca74df741863d96b62f45ca3, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _OriginalState
+      Entry: 7
+      Data: 0|Wcng.IdleState, Assembly-CSharp
+    - Name: AnimationBegin
+      Entry: 6
+      Data: 
+    - Name: AnimationLoop
+      Entry: 7
+      Data: 1|Animancer.ClipTransition, Animancer
+    - Name: _FadeDuration
+      Entry: 4
+      Data: 0.25
+    - Name: _Events
+      Entry: 7
+      Data: 2|Animancer.AnimancerEvent+Sequence+Serializable, Animancer.Lite
+    - Name: _NormalizedTimes
+      Entry: 7
+      Data: 3|System.Single[], mscorlib
+    - Name: 
+      Entry: 14
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Callbacks
+      Entry: 7
+      Data: 4|UnityEngine.Events.UnityEvent[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Names
+      Entry: 7
+      Data: 5|System.String[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Clip
+      Entry: 10
+      Data: 0
+    - Name: _Speed
+      Entry: 4
+      Data: 1
+    - Name: _NormalizedStartTime
+      Entry: 4
+      Data: NaN
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimationEnd
+      Entry: 6
+      Data: 
+    - Name: canChangeState
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimationStates
+      Entry: 7
+      Data: 6|System.Collections.Generic.Dictionary`2[[System.Collections.Generic.List`1[[Wcng.InputKey,
+        Assembly-CSharp]], mscorlib],[Wcng.CharacterState, Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 7|System.Collections.Generic.ObjectEqualityComparer`1[[System.Collections.Generic.List`1[[Wcng.InputKey,
+        Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[Wcng.InputKey, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 9|Wcng.MoveState, Assembly-CSharp
+    - Name: AnimationBegin
+      Entry: 6
+      Data: 
+    - Name: AnimationLoop
+      Entry: 7
+      Data: 10|Animancer.ClipTransition, Animancer
+    - Name: _FadeDuration
+      Entry: 4
+      Data: 0.25
+    - Name: _Events
+      Entry: 7
+      Data: 11|Animancer.AnimancerEvent+Sequence+Serializable, Animancer.Lite
+    - Name: _NormalizedTimes
+      Entry: 7
+      Data: 12|System.Single[], mscorlib
+    - Name: 
+      Entry: 14
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Callbacks
+      Entry: 7
+      Data: 13|UnityEngine.Events.UnityEvent[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Names
+      Entry: 7
+      Data: 14|System.String[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Clip
+      Entry: 10
+      Data: 1
+    - Name: _Speed
+      Entry: 4
+      Data: 1
+    - Name: _NormalizedStartTime
+      Entry: 4
+      Data: NaN
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimationEnd
+      Entry: 6
+      Data: 
+    - Name: canChangeState
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[Wcng.InputKey, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 16|Wcng.ComboState, Assembly-CSharp
+    - Name: AnimationBegin
+      Entry: 7
+      Data: 17|Animancer.ClipTransition, Animancer
+    - Name: _FadeDuration
+      Entry: 4
+      Data: 0.25
+    - Name: _Events
+      Entry: 7
+      Data: 18|Animancer.AnimancerEvent+Sequence+Serializable, Animancer.Lite
+    - Name: _NormalizedTimes
+      Entry: 7
+      Data: 19|System.Single[], mscorlib
+    - Name: 
+      Entry: 14
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Callbacks
+      Entry: 7
+      Data: 20|UnityEngine.Events.UnityEvent[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Names
+      Entry: 7
+      Data: 21|System.String[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Clip
+      Entry: 10
+      Data: 2
+    - Name: _Speed
+      Entry: 4
+      Data: 1
+    - Name: _NormalizedStartTime
+      Entry: 4
+      Data: NaN
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimationLoop
+      Entry: 7
+      Data: 22|Animancer.ClipTransition, Animancer
+    - Name: _FadeDuration
+      Entry: 4
+      Data: 0.25
+    - Name: _Events
+      Entry: 7
+      Data: 23|Animancer.AnimancerEvent+Sequence+Serializable, Animancer.Lite
+    - Name: _NormalizedTimes
+      Entry: 9
+      Data: 19
+    - Name: _Callbacks
+      Entry: 9
+      Data: 20
+    - Name: _Names
+      Entry: 9
+      Data: 21
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Clip
+      Entry: 10
+      Data: 3
+    - Name: _Speed
+      Entry: 4
+      Data: 1
+    - Name: _NormalizedStartTime
+      Entry: 4
+      Data: NaN
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimationEnd
+      Entry: 7
+      Data: 24|Animancer.ClipTransition, Animancer
+    - Name: _FadeDuration
+      Entry: 4
+      Data: 0.25
+    - Name: _Events
+      Entry: 7
+      Data: 25|Animancer.AnimancerEvent+Sequence+Serializable, Animancer.Lite
+    - Name: _NormalizedTimes
+      Entry: 9
+      Data: 19
+    - Name: _Callbacks
+      Entry: 9
+      Data: 20
+    - Name: _Names
+      Entry: 9
+      Data: 21
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Clip
+      Entry: 10
+      Data: 4
+    - Name: _Speed
+      Entry: 4
+      Data: 1
+    - Name: _NormalizedStartTime
+      Entry: 4
+      Data: NaN
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: canChangeState
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 26|System.Collections.Generic.List`1[[Wcng.InputKey, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 27|Wcng.DefenseState, Assembly-CSharp
+    - Name: AnimationBegin
+      Entry: 7
+      Data: 28|Animancer.ClipTransition, Animancer
+    - Name: _FadeDuration
+      Entry: 4
+      Data: 0.25
+    - Name: _Events
+      Entry: 7
+      Data: 29|Animancer.AnimancerEvent+Sequence+Serializable, Animancer.Lite
+    - Name: _NormalizedTimes
+      Entry: 7
+      Data: 30|System.Single[], mscorlib
+    - Name: 
+      Entry: 14
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Callbacks
+      Entry: 7
+      Data: 31|UnityEngine.Events.UnityEvent[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Names
+      Entry: 7
+      Data: 32|System.String[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Clip
+      Entry: 10
+      Data: 5
+    - Name: _Speed
+      Entry: 4
+      Data: 1
+    - Name: _NormalizedStartTime
+      Entry: 4
+      Data: NaN
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimationLoop
+      Entry: 7
+      Data: 33|Animancer.ClipTransition, Animancer
+    - Name: _FadeDuration
+      Entry: 4
+      Data: 0.25
+    - Name: _Events
+      Entry: 7
+      Data: 34|Animancer.AnimancerEvent+Sequence+Serializable, Animancer.Lite
+    - Name: _NormalizedTimes
+      Entry: 9
+      Data: 30
+    - Name: _Callbacks
+      Entry: 9
+      Data: 31
+    - Name: _Names
+      Entry: 9
+      Data: 32
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Clip
+      Entry: 10
+      Data: 6
+    - Name: _Speed
+      Entry: 4
+      Data: 1
+    - Name: _NormalizedStartTime
+      Entry: 4
+      Data: NaN
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimationEnd
+      Entry: 7
+      Data: 35|Animancer.ClipTransition, Animancer
+    - Name: _FadeDuration
+      Entry: 4
+      Data: 0.25
+    - Name: _Events
+      Entry: 7
+      Data: 36|Animancer.AnimancerEvent+Sequence+Serializable, Animancer.Lite
+    - Name: _NormalizedTimes
+      Entry: 9
+      Data: 30
+    - Name: _Callbacks
+      Entry: 9
+      Data: 31
+    - Name: _Names
+      Entry: 9
+      Data: 32
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Clip
+      Entry: 10
+      Data: 7
+    - Name: _Speed
+      Entry: 4
+      Data: 1
+    - Name: _NormalizedStartTime
+      Entry: 4
+      Data: NaN
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: canChangeState
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 37|System.Collections.Generic.List`1[[Wcng.InputKey, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 11
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 38|Wcng.RunState, Assembly-CSharp
+    - Name: AnimationBegin
+      Entry: 6
+      Data: 
+    - Name: AnimationLoop
+      Entry: 7
+      Data: 39|Animancer.ClipTransition, Animancer
+    - Name: _FadeDuration
+      Entry: 4
+      Data: 0.25
+    - Name: _Events
+      Entry: 7
+      Data: 40|Animancer.AnimancerEvent+Sequence+Serializable, Animancer.Lite
+    - Name: _NormalizedTimes
+      Entry: 7
+      Data: 41|System.Single[], mscorlib
+    - Name: 
+      Entry: 14
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Callbacks
+      Entry: 7
+      Data: 42|UnityEngine.Events.UnityEvent[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Names
+      Entry: 7
+      Data: 43|System.String[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _Clip
+      Entry: 10
+      Data: 8
+    - Name: _Speed
+      Entry: 4
+      Data: 1
+    - Name: _NormalizedStartTime
+      Entry: 4
+      Data: NaN
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimationEnd
+      Entry: 6
+      Data: 
+    - Name: canChangeState
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  controller: {fileID: 1484542439}
+  inputComponent: {fileID: 1229439535}
+--- !u!1 &1392170450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1392170451}
+  - component: {fileID: 1392170452}
+  m_Layer: 0
+  m_Name: UiCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1392170451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392170450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 868729089}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1392170452
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392170450}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 10
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 32
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!1 &1484542437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+  m_PrefabInstance: {fileID: 75577030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1484542438 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+  m_PrefabInstance: {fileID: 75577030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1484542439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484542437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad50f81b1d25c441943c37a89ba23f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Animator: {fileID: 1484542440}
+  _ActionOnDisable: 0
+--- !u!95 &1484542440 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 381ffe204132c004dbe36235e98379a5, type: 3}
+  m_PrefabInstance: {fileID: 75577030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &1484542441
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484542437}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1.1, z: 0}
+--- !u!1 &1827352223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1827352225}
+  - component: {fileID: 1827352224}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1827352224
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827352223}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1827352225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827352223}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
