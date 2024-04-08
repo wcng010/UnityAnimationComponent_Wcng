@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe44cf0639d2324983febae3239e576, type: 3}
   m_Name: MoveState
   m_EditorClassIdentifier: 
-  <Controller>k__BackingField: {fileID: 0}
-  animationBeginInterval: 1
+  timelineAsset: {fileID: 11400000, guid: 165aab1ecb9e2b041ad6004284374332, type: 2}
+  animationBeginInterval: 0
   animationloopInterval: 0
   animationEndInterval: 0
-  AnimationBegin:
+  animationBegin:
     _FadeDuration: 0.25
     _Events:
       _NormalizedTimes: []
@@ -25,7 +25,7 @@ MonoBehaviour:
     _Clip: {fileID: -6986167927975510084, guid: 955df72e0ce888e4b957744247697e51, type: 3}
     _Speed: 1
     _NormalizedStartTime: NaN
-  AnimationLoop:
+  animationLoop:
     _FadeDuration: 0.25
     _Events:
       _NormalizedTimes: []
@@ -34,7 +34,7 @@ MonoBehaviour:
     _Clip: {fileID: 0}
     _Speed: 1
     _NormalizedStartTime: NaN
-  AnimationEnd:
+  animationEnd:
     _FadeDuration: 0.25
     _Events:
       _NormalizedTimes: []
@@ -43,4 +43,17 @@ MonoBehaviour:
     _Clip: {fileID: 0}
     _Speed: 1
     _NormalizedStartTime: NaN
-  canChangeState: 1
+  audiobeginInterval: 0
+  audioloopInterval: 0
+  audioEndInterval: 0
+  audioClipBegin: {fileID: 0}
+  audioClipLoop: {fileID: 0}
+  audioClipEnd: {fileID: 0}
+  effectBeginInterval: 0
+  effectloopInterval: 0
+  effectEndInterval: 0
+  effectBegin: {fileID: 0}
+  effectLoop: {fileID: 0}
+  effectEnd: {fileID: 0}
+  <IsLoop>k__BackingField: 1
+  <CanChangeState>k__BackingField: 1

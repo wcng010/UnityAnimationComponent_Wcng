@@ -8,7 +8,6 @@ namespace Wcng
     [Serializable][CreateAssetMenu(fileName = "MoveState",menuName = "Data/State/MoveState")]
     public class MoveState : CharacterState
     {
-        public override bool CanChangeState => canChangeState;
         public override void OnPhysicUpdate()
         {
             
@@ -21,9 +20,9 @@ namespace Wcng
 
         public override void OnExit()
         {
-           
+           base.OnExit();
         }
 
-        [SerializeField]private bool canChangeState = true;
+        
     }
 }

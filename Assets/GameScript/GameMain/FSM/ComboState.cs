@@ -11,9 +11,6 @@ namespace Wcng
     [Serializable] [CreateAssetMenu(fileName = "ComboState",menuName = "Data/State/ComboState")]
     public class ComboState : CharacterState
     {
-        public override bool CanChangeState => canChangeState;
-        
-        [SerializeField]private bool canChangeState = false;
         private bool _IsEnter;
         private bool _IsCombo;
         private Coroutine _CurrentCoroutine;
@@ -21,25 +18,27 @@ namespace Wcng
         {
             _IsEnter = false;
             _IsCombo = false;
-            Controller.Play(AnimationBegin);
+            //Controller.Play(animationBegin);
+            Director.Play(timelineAsset);
             //当前段Animation已播完
             Controller.StartCoroutine(WaitForInvoke(() =>
             {
-                //如果进行连击指令
+                //第一次连击
                 if (_IsCombo)
                 {
-                    if (Controller.States.Current.Clip == AnimationBegin.Clip)
+                    //Controller.Play(animationLoop);
+                    Controller.StartCoroutine(WaitForInvoke(() =>
                     {
-                        Controller.Play(AnimationLoop);
-                        Controller.StartCoroutine(WaitForInvoke(() =>
-                        {
+                            //第二次连击
                             if (_IsCombo)
                             {
-                                Controller.Play(AnimationEnd);
+                                //Controller.Play(animationEnd);
                                 Controller.StartCoroutine(WaitForInvoke(() =>
                                 {
                                     StateMachine.BackLastState();
-                                }, Controller.States.Current.Length));
+                                }, animationEnd.Length));
+                                _IsEnter = false;
+                                _IsCombo = false;
                             }
                             else
                             {
@@ -48,44 +47,41 @@ namespace Wcng
                             Controller.StopCoroutine(_CurrentCoroutine);
                             _IsEnter = false;
                             _IsCombo = false;
-                        }, Controller.States.Current.Length));
-                        Controller.StopCoroutine(_CurrentCoroutine);
-                        _IsEnter = false;
-                        _IsCombo = false;
-                    }
+                    }, animationLoop.Length));
                 }
                 //不进行连击
                 else
                 {
                     StateMachine.BackLastState();
                 }
-                //停止输入检测
                 Controller.StopCoroutine(_CurrentCoroutine);
                 _IsEnter = false;
                 _IsCombo = false;
-            }, Controller.States.Current.Length));
+            }, animationBegin.Length));
         }
-
         public override void OnPhysicUpdate()
         {
             
         }
-
         public override void OnLogicUpdate()
         {
             //进入输入缓冲模式
-            if (Controller.States.Current.NormalizedTime >= 0.5f&&!_IsEnter)
+            if (!_IsEnter)
             {
-                _IsEnter = true;
-                _CurrentCoroutine = Controller.StartCoroutine(ComboStateInputBuffer());
+                AnimancerState currentState = Controller.States.Current;
+                if ((currentState.Clip == animationBegin.Clip || currentState.Clip == animationLoop.Clip)&&Controller.States.Current.NormalizedTime >= 0.5)
+                {
+                    _IsEnter = true;
+                    _CurrentCoroutine = Controller.StartCoroutine(ComboStateInputBuffer());
+                }
             }
         }
 
         public override void OnExit()
         {
-            
+            base.OnExit();
         }
-        
+
         //循环检测输入
         private IEnumerator ComboStateInputBuffer()
         {

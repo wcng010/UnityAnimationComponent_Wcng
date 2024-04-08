@@ -9,27 +9,21 @@ namespace Wcng
     [Serializable] [CreateAssetMenu(fileName = "DefenseState",menuName = "Data/State/DefenseState")]
     public class DefenseState : CharacterState
     {
-        public override bool CanChangeState => canChangeState;
-        
-        [SerializeField]private bool canChangeState = false;
 
-        private AnimancerState _AnimancerState;
-
-        private int _EnterCount = 0;
+        private int _enterCount = 0;
 
         public override void OnEnter()
         {
-            if (AnimationBegin != null)
+            Controller.Play(animationBegin);
+            if (animationBegin != null)
             {
-                Controller.Play(AnimationBegin);
-                _AnimancerState = Controller.States.Current;
-                ++_EnterCount;
-                if (_EnterCount == Int32.MaxValue) _EnterCount = 0;
+                ++_enterCount;
+                if (_enterCount == Int32.MaxValue) _enterCount = 0;
                 Controller.StartCoroutine(WaitForInvoke((enterCount) =>
                 {
-                    if(Controller.States.Current == _AnimancerState && enterCount == _EnterCount)
-                        Controller.Play(AnimationLoop);
-                }, Controller.States.Current.Length,_EnterCount));
+                    if(Controller.States.Current.Clip == animationBegin.Clip && enterCount == _enterCount)
+                        Controller.Play(animationLoop);
+                }, Controller.States.Current.Length,_enterCount));
             }
         }
 
@@ -42,9 +36,9 @@ namespace Wcng
         {
             if (!InputComponent.GetPressedKeys().Contains(InputKey.MouseClickRight))
             {
-                if (Controller.States.Current.Clip != AnimationEnd.Clip)
+                if (Controller.States.Current.Clip != animationEnd.Clip)
                 {
-                    Controller.Play(AnimationEnd);
+                    Controller.Play(animationEnd);
                     Controller.StartCoroutine(WaitForInvoke(() => {StateMachine.BackLastState(); },
                         Controller.States.Current.Length));
                 }

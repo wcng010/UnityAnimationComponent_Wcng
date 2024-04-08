@@ -1,11 +1,12 @@
 using Animancer;
+using UnityEngine.Playables;
 
 namespace Wcng
 {
     public interface IState
     {
         public bool CanChangeState { get; }
-        void OnInit<TState>(AnimancerComponent controller,StateMachine<TState> stateMachine,InputComponent inputComponent) where TState : class, IState;
+        void OnInit<TState>(StateMachine<TState> stateMachine,AnimancerComponent controller, InputComponent inputComponent, PlayableDirector playableDirector)  where TState : class, IState;
         void OnEnter();
         void OnPhysicUpdate();
         void OnLogicUpdate();

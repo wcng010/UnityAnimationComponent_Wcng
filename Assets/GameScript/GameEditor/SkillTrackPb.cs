@@ -8,10 +8,10 @@ namespace Wcng
 {
     public class SkillTrackPb : PlayableBehaviour
     {
-        public AnimancerComponent animancer;
+        public AnimancerComponent animancer => _animancer? _animancer: _animancer = GameObject.FindWithTag("Player").GetComponentInChildren<AnimancerComponent>();
+        private AnimancerComponent _animancer;
         public ClipTransition animancerClip;
         private float _time;
-        
         public override void PrepareFrame(Playable playable, FrameData info)
         {
             base.PrepareFrame(playable, info); 
@@ -36,8 +36,10 @@ namespace Wcng
         public override void OnBehaviourPause(Playable playable, FrameData info)
         {
             base.OnBehaviourPause(playable, info);
-            //animancer.Stop();
-            animancer.States.Current.Speed = 0;
+            if (!Application.isEditor&&animancer!=null&&animancer.States!=null&&animancer.States.Current!=null)
+            {
+                animancer.States.Current.Speed = 0;
+            }
         }
         
         /*
@@ -47,13 +49,13 @@ namespace Wcng
             return Vector3.Lerp(startScale, endScale, playProgress);
         }*/
         
-#if UNITY_EDITOR
+
         /// <summary>[Editor-Only] Applies the starting openness value to the door in Edit Mode.</summary>
         /// <remarks>Called in Edit Mode whenever this script is loaded or a value is changed in the Inspector.</remarks>
         private void OnValidate()
         {
             AnimancerUtilities.EditModeSampleAnimation(animancerClip.Clip, animancer, _time * animancerClip.Clip.length);
         }
-#endif
+
     }
 }

@@ -12,48 +12,46 @@ namespace Wcng
     [TrackClipType(typeof(SkillTrackPa))]
     public class SkillTrackTa : TrackAsset
     {
-        
-        public StateLoaderSo stateData;
-        private bool _isFirstEnable = false;
         public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount)
         {
             return ScriptPlayable<SkillTrackMb>.Create(graph, inputCount);
         }
-
+        
         public void OnCreateTrack(Type stateType)
         {
-            stateData = AssetDatabase.LoadAssetAtPath<StateLoaderSo>("Assets/Data/StateLoader.asset");
+            var stateData = AssetDatabase.LoadAssetAtPath<StateLoaderSo>("Assets/Data/StateLoader.asset");
             var skillData = stateData.GetState(stateType);
-            if (skillData.AnimationBegin != null)
+            if (skillData.animationBegin != null)
             {
                 var beginClip = CreateClip<SkillTrackPa>();
                 beginClip.displayName = "begin";
                 beginClip.start = skillData.animationBeginInterval;
-                beginClip.duration = skillData.AnimationBegin.Length;
+                beginClip.duration = skillData.animationBegin.Length;
                 SkillTrackPa beginPlayableAsset = beginClip.asset as SkillTrackPa;
-                beginPlayableAsset?.OnInit(skillData.Controller, skillData.AnimationBegin);
+                beginPlayableAsset?.OnInit(skillData.animationBegin);
                 
-                if (skillData.AnimationLoop != null)
+                if (skillData.animationLoop != null)
                 {
                     var loopClip = CreateClip<SkillTrackPa>();
                     loopClip.displayName = "loop";
-                    loopClip.start = skillData.animationBeginInterval+ skillData.animationloopInterval + skillData.AnimationBegin.Length;
-                    loopClip.duration = skillData.AnimationLoop.Length;
+                    loopClip.start = skillData.animationBeginInterval+ skillData.animationloopInterval + skillData.animationBegin.Length;
+                    loopClip.duration = skillData.animationLoop.Length;
                     SkillTrackPa loopPlayableAsset = loopClip.asset as SkillTrackPa;
-                    loopPlayableAsset?.OnInit(skillData.Controller, skillData.AnimationLoop);
+                    loopPlayableAsset?.OnInit(skillData.animationLoop);
                     
-                    if (skillData.AnimationEnd != null)
+                    if (skillData.animationEnd != null)
                     {
                         var endClip = CreateClip<SkillTrackPa>();
                         endClip.displayName = "end";
                         endClip.start =skillData.animationBeginInterval+ skillData.animationloopInterval +skillData.animationEndInterval
-                                       + skillData.AnimationBegin.Length + skillData.AnimationLoop.Length;
-                        endClip.duration = skillData.AnimationEnd.Length;
+                                       + skillData.animationBegin.Length + skillData.animationLoop.Length;
+                        endClip.duration = skillData.animationEnd.Length;
                         SkillTrackPa endPlayableAsset = endClip.asset as SkillTrackPa;
-                        endPlayableAsset?.OnInit(skillData.Controller, skillData.AnimationEnd);
+                        endPlayableAsset?.OnInit(skillData.animationEnd);
                     }
                 }
             }
+            
         }
     }
 }

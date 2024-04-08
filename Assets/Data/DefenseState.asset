@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e8bc7376a73e24683eca498db4091c, type: 3}
   m_Name: DefenseState
   m_EditorClassIdentifier: 
-  <Controller>k__BackingField: {fileID: 0}
-  animationBeginInterval: 1
+  timelineAsset: {fileID: 11400000, guid: 76b658d5a43643947890b8f47eb305d9, type: 2}
+  animationBeginInterval: 0
   animationloopInterval: 0
   animationEndInterval: 0
-  AnimationBegin:
+  animationBegin:
     _FadeDuration: 0.25
     _Events:
       _NormalizedTimes: []
@@ -25,7 +25,7 @@ MonoBehaviour:
     _Clip: {fileID: 3842296201797342383, guid: dad3a8582cc75fc42ab1f3a0935f9dc4, type: 3}
     _Speed: 1
     _NormalizedStartTime: NaN
-  AnimationLoop:
+  animationLoop:
     _FadeDuration: 0.25
     _Events:
       _NormalizedTimes: []
@@ -34,7 +34,7 @@ MonoBehaviour:
     _Clip: {fileID: -2437306798047886399, guid: d6e61dbe6e75cf946862a63f1a54f987, type: 3}
     _Speed: 1
     _NormalizedStartTime: NaN
-  AnimationEnd:
+  animationEnd:
     _FadeDuration: 0.25
     _Events:
       _NormalizedTimes: []
@@ -43,4 +43,17 @@ MonoBehaviour:
     _Clip: {fileID: -6416793981150643841, guid: a539a721628c5804597045e2ef7ef663, type: 3}
     _Speed: 1
     _NormalizedStartTime: NaN
-  canChangeState: 0
+  audiobeginInterval: 0
+  audioloopInterval: 0
+  audioEndInterval: 0
+  audioClipBegin: {fileID: 0}
+  audioClipLoop: {fileID: 0}
+  audioClipEnd: {fileID: 0}
+  effectBeginInterval: 0
+  effectloopInterval: 0
+  effectEndInterval: 0
+  effectBegin: {fileID: 0}
+  effectLoop: {fileID: 0}
+  effectEnd: {fileID: 0}
+  <IsLoop>k__BackingField: 0
+  <CanChangeState>k__BackingField: 0

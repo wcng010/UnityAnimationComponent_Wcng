@@ -9,18 +9,15 @@ namespace Wcng
     [Serializable]
     public class SkillTrackPa : PlayableAsset
     {
-        public AnimancerComponent Animancer =>
-            GameObject.FindWithTag("Player").GetComponentInChildren<AnimancerComponent>();
         public ClipTransition animancerClip;
         public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
         {
-            SkillTrackPb testDemo1 = new SkillTrackPb();
-            testDemo1.animancer = Animancer;
-            testDemo1.animancerClip = animancerClip;
-            return ScriptPlayable<SkillTrackPb>.Create(graph, testDemo1);
+            SkillTrackPb pb = new SkillTrackPb();
+            pb.animancerClip = animancerClip;
+            return ScriptPlayable<SkillTrackPb>.Create(graph, pb);
         }
 
-        public void OnInit(AnimancerComponent animancerComponent,ClipTransition clipTransition)
+        public void OnInit(ClipTransition clipTransition)
         {
             animancerClip = clipTransition;
         }

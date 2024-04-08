@@ -8,7 +8,6 @@ namespace Wcng
     public class StateLoaderSo : ScriptableObject
     {
         public List<CharacterState> states = new List<CharacterState>();
-        public int currentIndex = 0;
         public int MaxIndex => states.Count;
         
         public CharacterState GetState(Type stateType)

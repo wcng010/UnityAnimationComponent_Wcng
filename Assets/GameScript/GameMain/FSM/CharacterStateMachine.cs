@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Animancer;
 using UnityEngine;
+using UnityEngine.Playables;
 
 namespace Wcng
 {
@@ -11,10 +12,11 @@ namespace Wcng
             
         }
 
-        public CharacterStateMachine(InputComponent inputComponent,AnimancerComponent animancer)
+        public CharacterStateMachine(InputComponent inputComponent,AnimancerComponent animancer,PlayableDirector playableDirector)
         {
             InputComponent = inputComponent;
             AnimancerComponent = animancer;
+            PlayableDirector = playableDirector;
         }
     }
 }

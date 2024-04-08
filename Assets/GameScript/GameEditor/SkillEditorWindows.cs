@@ -1,50 +1,56 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Demos;
 using Sirenix.OdinInspector.Editor;
-using Sirenix.Utilities;
-using Sirenix.Utilities.Editor;
 using UnityEditor;
-using UnityEditor.VersionControl;
-using UnityEngine;
 using UnityEngine.Timeline;
 using Wcng;
 
-public class SkillEditorWindows : OdinEditorWindow
+namespace Wcng
 {
-    private static List<TimelineAsset> _TimelineAssets = new List<TimelineAsset>();
-    private static StateLoaderSo _Setting;
-    [MenuItem("Tools/LoadSkillTimeLine")]
-    private static void Load()
+    public  class SkillEditorWindows : OdinEditorWindow
     {
-        for (int i = 0; i < _TimelineAssets.Count; i++)
+        private static List<TimelineAsset> _TimelineAssets = new List<TimelineAsset>();
+        private static StateLoaderSo _Setting;
+        [MenuItem("Tools/LoadSkillTimeLine")]
+        private static void Load()
         {
-            var animGroup = _TimelineAssets[i].CreateTrack<GroupTrack>(); 
-            animGroup.name = "动作";
-            var skillTrack = _TimelineAssets[i].CreateTrack<SkillTrackTa>();
-            skillTrack.SetGroup(animGroup);
-            skillTrack.OnCreateTrack(_Setting.states[i].GetType());
-            var videoGroup = _TimelineAssets[i].CreateTrack<GroupTrack>();
-            videoGroup.name = "音频";
-            var effectGroup = _TimelineAssets[i].CreateTrack<GroupTrack>();
-            effectGroup.name = "特效";
+            for (int i = 0; i < _TimelineAssets.Count; i++)
+            {
+                //Animation Part
+                var animGroup = _TimelineAssets[i].CreateTrack<GroupTrack>(); 
+                animGroup.name = "动作";
+                var skillTrack = _TimelineAssets[i].CreateTrack<SkillTrackTa>();
+                skillTrack.SetGroup(animGroup);
+                skillTrack.OnCreateTrack(_Setting.states[i].GetType());
+                
+                //Audio Part
+                var audioGroup = _TimelineAssets[i].CreateTrack<GroupTrack>();
+                audioGroup.name = "音频";
+                var audioTrack = _TimelineAssets[i].CreateTrack<AudioExtensionTrack>();
+                audioTrack.OnCreateTrack(_Setting.states[i].GetType());
+                audioTrack.SetGroup(audioGroup);
+                
+                //Effect Part
+                var effectGroup = _TimelineAssets[i].CreateTrack<GroupTrack>();
+                effectGroup.name = "特效";
+                var effectTrack = _TimelineAssets[i].CreateTrack<EffectTrack>();
+                effectTrack.OnCreateTrack(_Setting.states[i].GetType());
+                effectTrack.SetGroup(effectGroup);
+                _Setting.states[i].timelineAsset = _TimelineAssets[i];
+            }
         }
-    }
 
-    [MenuItem("Tools/CreateSkillTimeLine")]
-    private static void Create()
-    {
-        _TimelineAssets.Clear();
-        _Setting = AssetDatabase.LoadAssetAtPath<StateLoaderSo>("Assets/Data/StateLoader.asset");
-        foreach (var state in _Setting.states)
+        [MenuItem("Tools/CreateSkillTimeLine")]
+        private static void Create()
         {
-            var timelineAsset = CreateInstance<TimelineAsset>();
-            _TimelineAssets.Add(timelineAsset);
-            AssetDatabase.CreateAsset(timelineAsset, "Assets/Art/Timeline/" + state.name + ".playable");
-            AssetDatabase.Refresh();
+            _TimelineAssets.Clear();
+            _Setting = AssetDatabase.LoadAssetAtPath<StateLoaderSo>("Assets/Data/StateLoader.asset");
+            foreach (var state in _Setting.states)
+            {
+                var timelineAsset = CreateInstance<TimelineAsset>();
+                _TimelineAssets.Add(timelineAsset);
+                AssetDatabase.CreateAsset(timelineAsset, "Assets/Art/Timeline/" + state.name + ".playable");
+                AssetDatabase.Refresh();
+            }
         }
     }
 }

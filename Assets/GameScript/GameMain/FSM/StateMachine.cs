@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Animancer;
 using UnityEngine;
+using UnityEngine.Playables;
 
 namespace Wcng
 {
@@ -15,7 +16,7 @@ namespace Wcng
                 if (_OriginalState == null) return null;
                 if (!_StateList.Contains(_OriginalState))
                 {
-                    _OriginalState.OnInit(AnimancerComponent,this,InputComponent);
+                    _OriginalState.OnInit(this,AnimancerComponent,InputComponent,PlayableDirector);
                     _StateList.Add(_OriginalState);
                 }
                 return _OriginalState;
@@ -33,7 +34,7 @@ namespace Wcng
                 if (_CurrentState == null) return null;
                 if (!_StateList.Contains(_CurrentState))
                 {
-                    _CurrentState.OnInit(AnimancerComponent,this,InputComponent);
+                    _CurrentState.OnInit(this,AnimancerComponent,InputComponent,PlayableDirector);
                     _StateList.Add(_CurrentState);
                 }
                 return _CurrentState;
@@ -50,7 +51,7 @@ namespace Wcng
                 if (_PreviousState == null) return null;
                 if (!_StateList.Contains(_PreviousState))
                 {
-                    _PreviousState.OnInit(AnimancerComponent,this,InputComponent);
+                    _PreviousState.OnInit(this,AnimancerComponent,InputComponent,PlayableDirector);
                     _StateList.Add(_PreviousState);
                 }
                 return _PreviousState;
@@ -61,6 +62,7 @@ namespace Wcng
         
         protected InputComponent InputComponent;
         protected AnimancerComponent AnimancerComponent;
+        protected PlayableDirector PlayableDirector;
         
         private readonly List<IState> _StateList = new List<IState>();
         
@@ -69,7 +71,7 @@ namespace Wcng
             TState stateTemp = state as TState;
             if (!_StateList.Contains(stateTemp))
             {
-                stateTemp?.OnInit(AnimancerComponent,this,InputComponent);
+                stateTemp?.OnInit(this,AnimancerComponent,InputComponent,PlayableDirector);
                 _StateList.Add(stateTemp);
             }
             if (CurrentState == null)

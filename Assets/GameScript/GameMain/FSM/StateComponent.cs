@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Animancer;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Playables;
 
 namespace Wcng
 {
@@ -19,12 +20,15 @@ namespace Wcng
         
         [FoldoutGroup("Reference")] [SerializeField]
         private InputComponent inputComponent;
+
+        [FoldoutGroup("Reference")] [SerializeField]
+        private PlayableDirector playableDirector;
         
         private CharacterStateMachine _StateMachine;
 
         private void Awake()
         {
-            _StateMachine = new CharacterStateMachine(inputComponent,controller);
+            _StateMachine = new CharacterStateMachine(inputComponent,controller,playableDirector);
             _StateMachine.ChangeState(_OriginalState);
         }
         
@@ -45,13 +49,18 @@ namespace Wcng
         {
             //遍历输入组件的输入键
             List<InputKey> pressedKeys= inputComponent.GetPressedKeys();
-            if (pressedKeys.Count == 0) 
+            int pressedKeyNum = pressedKeys.Count;
+            if (pressedKeyNum == 0) 
                 _StateMachine.ChangeState(_OriginalState);
+            //遍历每一条指令的输入条件                          
             foreach (var animKeys in AnimationStates)
             {
                 int count = 0;
+                if(pressedKeyNum != animKeys.Key.Count) 
+                    continue;
                 foreach (var key in animKeys.Key)
                 {
+                    //如果当前压入键包含当前条件
                     if (pressedKeys.Contains(key))
                     {
                         ++count;

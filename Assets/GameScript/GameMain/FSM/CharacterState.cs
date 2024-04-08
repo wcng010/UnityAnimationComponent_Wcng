@@ -2,8 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Animancer;
+using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.Serialization;
+using UnityEngine.Timeline;
 
 namespace Wcng
 {
@@ -18,41 +21,81 @@ namespace Wcng
             DefenseState
         }
 
-        [field:SerializeField]public AnimancerComponent Controller { get; private set; }
+        protected PlayableDirector Director;
+        protected AnimancerComponent Controller;
         protected CharacterStateMachine StateMachine;
         protected InputComponent InputComponent;
+        public TimelineAsset timelineAsset;
+
+        [FoldoutGroup("动画")]
         public float animationBeginInterval;
+        [FoldoutGroup("动画")]
         public float animationloopInterval;
+        [FoldoutGroup("动画")]
         public float animationEndInterval;
-        public ClipTransition AnimationBegin;
-        public ClipTransition AnimationLoop;
-        public ClipTransition AnimationEnd;
+        [FoldoutGroup("动画")]
+        public ClipTransition animationBegin;
+        [FoldoutGroup("动画")]
+        public ClipTransition animationLoop;
+        [FoldoutGroup("动画")]
+        public ClipTransition animationEnd;
 
-        public abstract bool CanChangeState { get; }
-
-
-        public void OnInit<TState>(AnimancerComponent controller, StateMachine<TState> stateMachine, InputComponent inputComponent) where TState : class, IState
+        [FoldoutGroup("音频")] 
+        public float audiobeginInterval;
+        [FoldoutGroup("音频")]
+        public float audioloopInterval;
+        [FoldoutGroup("音频")]
+        public float audioEndInterval;
+        [FoldoutGroup("音频")]
+        public AudioClip audioClipBegin;
+        [FoldoutGroup("音频")]
+        public AudioClip audioClipLoop;
+        [FoldoutGroup("音频")]
+        public AudioClip audioClipEnd;
+        
+        [FoldoutGroup("特效")]
+        public float effectBeginInterval;
+        [FoldoutGroup("特效")]
+        public float effectloopInterval;
+        [FoldoutGroup("特效")]
+        public float effectEndInterval;
+        [FoldoutGroup("特效")]
+        public GameObject effectBegin;
+        [FoldoutGroup("特效")]
+        public GameObject effectLoop;
+        [FoldoutGroup("特效")]
+        public GameObject effectEnd;
+        
+        [field:SerializeField] public  bool IsLoop { get; set; }
+        [field:SerializeField] public bool CanChangeState { get; set; }
+        
+        public void OnInit<TState>(StateMachine<TState> stateMachine,AnimancerComponent controller, InputComponent inputComponent, PlayableDirector playableDirector) where TState : class, IState
         {
-            this.Controller = controller;
+            Controller = controller;
             StateMachine = stateMachine as CharacterStateMachine;
+            Director = playableDirector;
             InputComponent = inputComponent;
         }
-        public virtual void OnEnter(){
-            if (AnimationBegin != null) Controller.Play(AnimationBegin);
-            else if (AnimationLoop != null) Controller.Play(AnimationLoop);
-            else if (AnimationEnd != null) Controller.Play(AnimationEnd);
+        public virtual void OnEnter()
+        {
+            Director.Play(timelineAsset);
+            if (IsLoop) Director.extrapolationMode = DirectorWrapMode.Loop;
+            else Director.extrapolationMode = DirectorWrapMode.None;
         }
 
         public abstract void OnPhysicUpdate();
 
         public abstract void OnLogicUpdate();
 
-        public abstract void OnExit();
+        public virtual void OnExit()
+        {
+            Director.Stop();
+        }
 
 
         protected IEnumerator AnimationPlay()
         {
-            Controller.Play(AnimationBegin);
+            Controller.Play(animationBegin);
             yield return null;
         }
         
