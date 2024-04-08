@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Animancer;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Wcng
 {
     [Serializable]
-    public abstract class CharacterState : IState
+    public abstract class CharacterState : ScriptableObject,IState
     {
         public enum CharacterStateType
         {
@@ -17,9 +18,12 @@ namespace Wcng
             DefenseState
         }
 
-        protected AnimancerComponent Controller;
+        [field:SerializeField]public AnimancerComponent Controller { get; private set; }
         protected CharacterStateMachine StateMachine;
         protected InputComponent InputComponent;
+        public float animationBeginInterval;
+        public float animationloopInterval;
+        public float animationEndInterval;
         public ClipTransition AnimationBegin;
         public ClipTransition AnimationLoop;
         public ClipTransition AnimationEnd;
@@ -29,7 +33,7 @@ namespace Wcng
 
         public void OnInit<TState>(AnimancerComponent controller, StateMachine<TState> stateMachine, InputComponent inputComponent) where TState : class, IState
         {
-            Controller = controller;
+            this.Controller = controller;
             StateMachine = stateMachine as CharacterStateMachine;
             InputComponent = inputComponent;
         }

@@ -6,7 +6,7 @@ using Wcng;
 
 namespace Wcng
 {
-    [Serializable]
+    [Serializable] [CreateAssetMenu(fileName = "DefenseState",menuName = "Data/State/DefenseState")]
     public class DefenseState : CharacterState
     {
         public override bool CanChangeState => canChangeState;

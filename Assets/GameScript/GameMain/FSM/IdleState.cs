@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 
 namespace Wcng
 {
-    [Serializable]
+    [Serializable][CreateAssetMenu(fileName = "IdleState",menuName = "Data/State/IdleState")]
     public class IdleState : CharacterState
     {
         public override bool CanChangeState => canChangeState;

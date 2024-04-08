@@ -8,7 +8,7 @@ using Wcng;
 
 namespace Wcng
 {
-    [Serializable]
+    [Serializable] [CreateAssetMenu(fileName = "ComboState",menuName = "Data/State/ComboState")]
     public class ComboState : CharacterState
     {
         public override bool CanChangeState => canChangeState;

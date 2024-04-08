@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3756be403ce6c9a4e823b1824068e918, type: 3}
+  m_Name: ComboState
+  m_EditorClassIdentifier: 
+  <Controller>k__BackingField: {fileID: 0}
+  animationBeginInterval: 1
+  animationloopInterval: 0
+  animationEndInterval: 0
+  AnimationBegin:
+    _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: -7333129875705441126, guid: 2b33f40cf4014b2488275c0026eb9bbe, type: 3}
+    _Speed: 1
+    _NormalizedStartTime: NaN
+  AnimationLoop:
+    _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: -7029741437066087888, guid: 5e24292beeadcf04bbb7ead0bf781ad9, type: 3}
+    _Speed: 1
+    _NormalizedStartTime: NaN
+  AnimationEnd:
+    _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: 4960409498807354063, guid: ee0ead42411e33f41a6d8779695e2690, type: 3}
+    _Speed: 1
+    _NormalizedStartTime: NaN
+  canChangeState: 0

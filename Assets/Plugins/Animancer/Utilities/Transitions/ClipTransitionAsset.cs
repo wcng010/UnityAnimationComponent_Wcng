@@ -4,6 +4,7 @@ using Animancer.Units;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using Object = UnityEngine.Object;
 
 namespace Animancer
