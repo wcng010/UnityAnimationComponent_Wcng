@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Animancer;
 using Sirenix.OdinInspector;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Serialization;
@@ -11,61 +12,30 @@ using UnityEngine.Timeline;
 namespace Wcng
 {
     [Serializable]
-    public abstract class CharacterState : ScriptableObject,IState
+    public struct From
     {
-        public enum CharacterStateType
+        public double start;
+        public double interval;
+        public From(double s, double i)
         {
-            IdleState,
-            MoveState,
-            Combo1State,
-            DefenseState
+            start = s;
+            interval = i;
         }
+    }
 
+    [Serializable]
+    public abstract class CharacterState : SerializedScriptableObject,IState
+    {
         protected PlayableDirector Director;
         protected AnimancerComponent Controller;
         protected CharacterStateMachine StateMachine;
         protected InputComponent InputComponent;
         public TimelineAsset timelineAsset;
-
-        [FoldoutGroup("动画")]
-        public float animationBeginInterval;
-        [FoldoutGroup("动画")]
-        public float animationloopInterval;
-        [FoldoutGroup("动画")]
-        public float animationEndInterval;
-        [FoldoutGroup("动画")]
-        public ClipTransition animationBegin;
-        [FoldoutGroup("动画")]
-        public ClipTransition animationLoop;
-        [FoldoutGroup("动画")]
-        public ClipTransition animationEnd;
-
-        [FoldoutGroup("音频")] 
-        public float audiobeginInterval;
-        [FoldoutGroup("音频")]
-        public float audioloopInterval;
-        [FoldoutGroup("音频")]
-        public float audioEndInterval;
-        [FoldoutGroup("音频")]
-        public AudioClip audioClipBegin;
-        [FoldoutGroup("音频")]
-        public AudioClip audioClipLoop;
-        [FoldoutGroup("音频")]
-        public AudioClip audioClipEnd;
-        
-        [FoldoutGroup("特效")]
-        public float effectBeginInterval;
-        [FoldoutGroup("特效")]
-        public float effectloopInterval;
-        [FoldoutGroup("特效")]
-        public float effectEndInterval;
-        [FoldoutGroup("特效")]
-        public GameObject effectBegin;
-        [FoldoutGroup("特效")]
-        public GameObject effectLoop;
-        [FoldoutGroup("特效")]
-        public GameObject effectEnd;
-        
+        [FoldoutGroup("动画")] public Dictionary<ClipTransition, From> AnimationClips;
+        [FoldoutGroup("音频")] public Dictionary<AudioClip, From> AudioClips;
+        [FoldoutGroup("特效")] public Dictionary<GameObject, From> EffectClips;
+        //[FoldoutGroup("事件")] public Dictionary<SignalAsset, double> EventSignals;
+        [FoldoutGroup("事件")] public Dictionary<SignalEvent, double> MyEventSignals;
         [field:SerializeField] public  bool IsLoop { get; set; }
         [field:SerializeField] public bool CanChangeState { get; set; }
         
@@ -76,6 +46,61 @@ namespace Wcng
             Director = playableDirector;
             InputComponent = inputComponent;
         }
+        
+        public void WriteEventSignals(SignalAsset signal,double pos)
+        {
+            SignalEvent temp = null;
+            if (signal != null)
+            {
+                foreach (var eventSignal in MyEventSignals)
+                {
+                    if (signal == eventSignal.Key.signalAsset)
+                    {
+                        temp = eventSignal.Key;
+                        break;
+                    }
+                }
+            }
+            if (temp != null) MyEventSignals[temp] = pos;
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
+        }
+        
+        
+        public void WriteAnimationClip(AnimationClip animationClip,double start,double interval)
+        {
+            ClipTransition temp = null;
+            foreach (var clip in AnimationClips)
+            {
+                if (clip.Key.Clip == animationClip)
+                {
+                    temp = clip.Key;
+                    break;
+                }
+            }
+            From from = new From(start,interval);
+            if (temp != null) AnimationClips[temp] = from;
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
+        }
+        
+        public void WriteAudioClip(AudioClip audioClip,double start,double interval)
+        {
+            From from = new From(start,interval);
+            if (audioClip != null) AudioClips[audioClip] = from;
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
+        }
+        
+        public void WriteEffectAudio(GameObject effectObj,double start,double interval)
+        {
+            From from = new From(start,interval);
+            if (effectObj != null) EffectClips[effectObj] = from;
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
+        }
+
+
         public virtual void OnEnter()
         {
             Director.Play(timelineAsset);
@@ -91,11 +116,9 @@ namespace Wcng
         {
             Director.Stop();
         }
-
-
+        
         protected IEnumerator AnimationPlay()
         {
-            Controller.Play(animationBegin);
             yield return null;
         }
         

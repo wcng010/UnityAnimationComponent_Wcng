@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerEffect
+  - SkillCore
   layers:
   - Default
   - TransparentFX

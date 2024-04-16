@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEditor;
+using UnityEngine;
 using UnityEngine.Timeline;
 
 namespace Wcng
@@ -8,45 +9,30 @@ namespace Wcng
     { 
         public void OnCreateTrack(Type stateType)
         {
-            var stateData = AssetDatabase.LoadAssetAtPath<StateLoaderSo>("Assets/Data/StateLoader.asset");
+            var stateData = AssetDatabase.LoadAssetAtPath<StateLoaderSo>("Assets/Skill/Data/StateLoader.asset");
             var audiodData = stateData.GetState(stateType);
-            if (audiodData.audioClipBegin != null)
+            int index = 0;
+            double interval = 0;
+            if (audiodData.AnimationClips != null)
             {
-                var beginClip = CreateClip<AudioPlayableAsset>();
-                beginClip.displayName = "audio1";
-                beginClip.start = audiodData.audiobeginInterval;
-                beginClip.duration = 1f;
-                var beginPlayableAsset = beginClip.asset as AudioPlayableAsset;
-                if (beginPlayableAsset != null)
+                foreach (var clip in audiodData.AudioClips)
                 {
-                    //beginPlayableAsset.sourceGameObject.defaultValue= SourceObj;
-                    beginPlayableAsset.clip = audiodData.audioClipBegin;
-                }
-            }
-            if (audiodData.audioClipLoop != null)
-            {
-                var loopClip = CreateClip<AudioPlayableAsset>();
-                loopClip.displayName = "audio2";
-                loopClip.start = audiodData.effectloopInterval;
-                loopClip.duration = 1f;
-                var loopPlayableAsset =  loopClip.asset as AudioPlayableAsset;
-                if (loopPlayableAsset != null)
-                {
-                    //loopPlayableAsset.sourceGameObject.defaultValue= SourceObj;
-                    loopPlayableAsset.clip = audiodData.audioClipLoop;
-                }
-            }
-            if (audiodData.audioClipEnd != null)
-            {
-                var endClip = CreateClip<AudioPlayableAsset>();
-                endClip.displayName = "audio3";
-                endClip.start = audiodData.effectEndInterval;
-                endClip.duration = 1f;
-                var endPlayableAsset = endClip.asset as AudioPlayableAsset;
-                if (endPlayableAsset != null)
-                {
-                    //endPlayableAsset.sourceGameObject.defaultValue= SourceObj;
-                    endPlayableAsset.clip = audiodData.audioClipEnd;
+                    var displayClip = CreateClip<AudioPlayableAsset>();
+                    displayClip.displayName = "audio_" + index++;
+                    if (clip.Value.interval != 0)
+                    {
+                        displayClip.start = clip.Value.start;
+                        displayClip.duration = clip.Value.interval;
+                    }
+                    else
+                    {
+                        displayClip.start = interval;
+                        displayClip.duration = clip.Key.length;
+                        interval += displayClip.duration;
+                    }
+                    AudioPlayableAsset beginPlayableAsset = displayClip.asset as AudioPlayableAsset;
+                    if (beginPlayableAsset != null)
+                        beginPlayableAsset.clip = clip.Key;
                 }
             }
         }

@@ -14,8 +14,6 @@ public class TimelineTest : MonoBehaviour
         dongzuoGroup = timelineAsset.CreateTrack<GroupTrack>();
         dongzuoGroup.name = "动作";
         //var playable = timelineAsset.CreateTrack<SkillTrackTa>();
-        var temp = timelineAsset.CreateTrack<SkillTrackTa>();
-        temp.SetGroup(dongzuoGroup);
         //timelineAsset.Crea
     }
 
