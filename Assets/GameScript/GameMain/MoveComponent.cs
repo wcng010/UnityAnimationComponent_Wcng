@@ -7,6 +7,7 @@ namespace Wcng
 {
     public class MoveComponent : MonoBehaviour
     {
+        [SerializeField]
         private Vector3 _MoveVector;
         private float _CurrentSpeed;
         [SerializeField] private float moveSpeed;
@@ -14,7 +15,7 @@ namespace Wcng
         [SerializeField] private float rotateSpeed;
         [SerializeField] private InputComponent inputComponent;
         [SerializeField] private StateComponent stateComponent;
-        [SerializeField] private CharacterController controller;
+        [SerializeField] private Rigidbody _rigidbody;
         void Update()
         {
             var moveForwardVector3 = ConvertMoveInputToCameraSpace(Camera.main.transform, inputComponent.moveVec2.x, inputComponent.moveVec2.y);
@@ -39,8 +40,8 @@ namespace Wcng
                 // _currentSpeed = Mathf.MoveTowards(_currentSpeed, moveSpeed, acceleration * Time.deltaTime);
             
                 // Move the character
-                _MoveVector *= speed*0.001f;
-                controller.Move(_MoveVector);
+                _MoveVector *= speed;
+                _rigidbody.velocity = _MoveVector;
                 float step = rotateSpeed * Time.deltaTime;
                 if (_MoveVector != Vector3.zero)
                 {
@@ -50,7 +51,7 @@ namespace Wcng
             }
             else
             {
-                controller.velocity.Set(0,controller.velocity.y,0);
+                _rigidbody.velocity.Set(0,_rigidbody.velocity.y,0);
             }
         }
     }

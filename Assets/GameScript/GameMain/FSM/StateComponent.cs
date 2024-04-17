@@ -47,28 +47,32 @@ namespace Wcng
         //如果没有输入则，要求
         private void AnimationPlay()
         {
-            //遍历输入组件的输入键
-            List<InputKey> pressedKeys= inputComponent.GetPressedKeys();
-            int pressedKeyNum = pressedKeys.Count;
-            if (pressedKeyNum == 0) 
-                _StateMachine.ChangeState(_OriginalState);
-            //遍历每一条指令的输入条件                          
-            foreach (var animKeys in AnimationStates)
+            if (inputComponent)
             {
-                int count = 0;
-                if(pressedKeyNum != animKeys.Key.Count) 
-                    continue;
-                foreach (var key in animKeys.Key)
+                //遍历输入组件的输入键
+                List<InputKey> pressedKeys = inputComponent.GetPressedKeys();
+                int pressedKeyNum = pressedKeys.Count;
+                if (pressedKeyNum == 0)
+                    _StateMachine.ChangeState(_OriginalState);
+                //遍历每一条指令的输入条件                          
+                foreach (var animKeys in AnimationStates)
                 {
-                    //如果当前压入键包含当前条件
-                    if (pressedKeys.Contains(key))
+                    int count = 0;
+                    if (pressedKeyNum != animKeys.Key.Count)
+                        continue;
+                    foreach (var key in animKeys.Key)
                     {
-                        ++count;
+                        //如果当前压入键包含当前条件
+                        if (pressedKeys.Contains(key))
+                        {
+                            ++count;
+                        }
                     }
-                }
-                if (count == animKeys.Key.Count)
-                {
-                    _StateMachine.ChangeState(animKeys.Value);
+
+                    if (count == animKeys.Key.Count)
+                    {
+                        _StateMachine.ChangeState(animKeys.Value);
+                    }
                 }
             }
         }
