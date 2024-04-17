@@ -5,7 +5,7 @@ using Animancer;
 using UnityEngine;
 using Wcng;
 
-namespace Wcng
+namespace Wcng.FSM
 {
     [Serializable] [CreateAssetMenu(fileName = "DefenseState",menuName = "Data/State/DefenseState")]
     public class DefenseState : CharacterState

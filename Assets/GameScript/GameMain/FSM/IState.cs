@@ -1,7 +1,7 @@
 using Animancer;
 using UnityEngine.Playables;
 
-namespace Wcng
+namespace Wcng.FSM
 {
     public interface IState
     {

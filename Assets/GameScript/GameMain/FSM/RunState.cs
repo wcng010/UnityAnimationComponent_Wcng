@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Wcng;
 
-namespace Wcng
+namespace Wcng.FSM
 {
     [Serializable][CreateAssetMenu(fileName = "RunState",menuName = "Data/State/RunState")]
     public class RunState : CharacterState

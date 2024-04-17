@@ -1,9 +1,8 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 using UnityEngine.Timeline;
+using Wcng.FSM;
 
-namespace Wcng
+namespace Wcng.Library
 {
     public class SignalExtensionSubscriber : MonoBehaviour
     {

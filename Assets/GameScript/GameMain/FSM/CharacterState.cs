@@ -6,10 +6,10 @@ using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Playables;
-using UnityEngine.Serialization;
 using UnityEngine.Timeline;
+using Wcng.SkillEditor;
 
-namespace Wcng
+namespace Wcng.FSM
 {
     [Serializable]
     public struct From

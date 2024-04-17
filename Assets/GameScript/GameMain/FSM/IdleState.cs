@@ -3,7 +3,7 @@ using Animancer;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Wcng
+namespace Wcng.FSM
 {
     [Serializable][CreateAssetMenu(fileName = "IdleState",menuName = "Data/State/IdleState")]
     public class IdleState : CharacterState

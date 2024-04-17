@@ -3,7 +3,7 @@ using Animancer;
 using UnityEngine;
 using UnityEngine.Playables;
 
-namespace Wcng
+namespace Wcng.FSM
 {
     public class CharacterStateMachine : StateMachine<CharacterState>
     {

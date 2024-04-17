@@ -1,6 +1,6 @@
 using Animancer;
 
-namespace Wcng
+namespace Wcng.FSM
 {
     public interface IStateMachine
     {

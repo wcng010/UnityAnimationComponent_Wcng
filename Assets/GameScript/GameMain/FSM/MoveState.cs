@@ -3,7 +3,7 @@ using Animancer;
 using UnityEngine;
 using Wcng;
 
-namespace Wcng
+namespace Wcng.FSM
 {
     [Serializable][CreateAssetMenu(fileName = "MoveState",menuName = "Data/State/MoveState")]
     public class MoveState : CharacterState
